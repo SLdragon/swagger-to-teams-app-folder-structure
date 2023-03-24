@@ -1,0 +1,25 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "GET /pets?limit=value: List all pets",
+      "wrap": true
+    },
+    {
+      "type": "Input.Number",
+      "placeholder": "(query)Input limit number",
+      "id": "limit",
+      "isRequired": false
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "actions": [
+    {
+      "type": "Action.Execute",
+      "verb": "listPets",
+      "title": "GET"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "POST /pets: Create a pet",
+      "wrap": true
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "actions": [
+    {
+      "type": "Action.Execute",
+      "verb": "createPets",
+      "title": "POST"
+    }
+  ]
+}
