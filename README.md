@@ -18,3 +18,16 @@ In the src folder, there are 4 sub folders:
 
 ![](./images/project-structure.png)
 
+# Discuss
+- For adaptive cards: if response schema use `ref` property, we can use component name as the adaptive card name, and can reuse it for different api. However, some response body may not contain `ref` property.
+
+- For apis, we can refer the design of swagger client code generator, use one file as APIs
+```ts
+export class PetsApi {
+    public createPets(options?: any) {}
+    public listPets(limit?: number, options?: any) {}
+    public showPetById(petId: string, options?: any) {},
+}
+```
+
+- Tim's questions: why not call real backend service: Because our main target is help user to generate a working demo project, user can update it for real use. Call real code will introduce complexity (such as auth), and most backend service may contain their own sdk, user may want to use the sdk to call real code. And from our previous experience of our connector api inside teamsfx sdk(which generate code to help user to call their apis), and the usage is very low.
