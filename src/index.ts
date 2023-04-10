@@ -17,7 +17,7 @@ const commandBot = new ConversationBot({
   },
   command: {
     enabled: true,
-    commands: [new CreatePetsCommandHandler(), new ShowPetByIdCommandHandler(), new ListPetsCommandHandler()],
+    commands: [new ListPetsCommandHandler(),new CreatePetsCommandHandler(), new ShowPetByIdCommandHandler()],
   },
   cardAction: {
     enabled: true,
