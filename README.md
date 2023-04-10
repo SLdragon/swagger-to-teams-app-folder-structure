@@ -15,7 +15,7 @@ In the src folder, there are 4 sub folders:
     - This folder contains card action handlers, when user click action button in the request adaptive card, it would use these handlers to get response and render response adaptive card.
 
 * commands folder
-    - This folder contains bot command handlers, when user send messages, it will match the api, and send back request adaptive card.
+    - This folder contains bot command handlers, when user send messages, it will match the api, and send back request adaptive card. There is a special command handler which named `helpCommandHandler` which is used to show help messages.
 
 ![](./images/project-structure.png)
 
