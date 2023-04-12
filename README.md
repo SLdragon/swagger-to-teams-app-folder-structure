@@ -19,5 +19,17 @@ In the src folder, there are 4 sub folders:
 
 ![](./images/project-structure.png)
 
+# Workflow
+![](./images/workflow-command-workflow.png)
+- User input command message to the bot, for example `GET /pets`
+- Bot service receive this message, and trigger `listPetsCommandHandler`
+- `listPetsCommandHandler` send back `listPetsRequestCard`
+- User receive `listPetsRequestCard`, and input limit number in the adaptive card, and click `GET` button
+- The `GET` button trigger `listPetsActionHandler`, and this action handler call `mockApiProvider.listPets` and get the data from API service.
+- `listPetsActionHandler` use the data to render `listPetsResponseCard` adaptive card and send back to user
+  ![](./images/workflow1.png)
+
+  ![](./images/workflow2.png)
+
 # Discuss
 - Tim's questions: why not call real backend service: Because our main target is help user to generate a working demo project, user can update it for real use. Call real code will introduce complexity (such as auth), and most backend service may contain their own sdk, user may want to use the sdk to call real code. And from our previous experience of our connector api inside teamsfx sdk(which generate code to help user to call their apis), and the usage is low.
