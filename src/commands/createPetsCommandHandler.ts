@@ -5,7 +5,7 @@ import {
   TriggerPatterns,
   MessageBuilder,
 } from "@microsoft/teamsfx";
-import createPetsResponseCard from "../adaptiveCards/createPetsResponseCard.json";
+import createPetsRequestCard from "../adaptiveCards/createPetsRequestCard.json";
 
 export class CreatePetsCommandHandler implements TeamsFxBotCommandHandler {
   triggerPatterns: TriggerPatterns = "POST /pets$";
@@ -15,6 +15,6 @@ export class CreatePetsCommandHandler implements TeamsFxBotCommandHandler {
     message: CommandMessage,
   ): Promise<string | Partial<Activity> | void> {
     console.log("Bot received message: " + message.text);
-    return MessageBuilder.attachAdaptiveCardWithoutData(createPetsResponseCard);
+    return MessageBuilder.attachAdaptiveCardWithoutData(createPetsRequestCard);
   }
 }
